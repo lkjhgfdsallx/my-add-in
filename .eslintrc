@@ -1,0 +1,6 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "no-console": "off" // 暂时关闭 console 的警告提示
+  }
+}

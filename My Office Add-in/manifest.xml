@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>c6447109-514f-49a1-9b8c-07fb80397c7f</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>好投科技</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="火富牛" />
+  <Description DefaultValue="火富牛office插件" />
+  <IconUrl DefaultValue="https://script-lab.azureedge.net/assets/images/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://script-lab.azureedge.net/assets/images/icon-64.png" />
+  <SupportUrl DefaultValue="https://fof99.com" />
+  <AppDomains>
+    <AppDomain>https://localhost:3000</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Description resid="PG.Description" />
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <FunctionFile resid="PG.Functions.Url" />
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <CustomTab id="TabPlayground">
+              <Group id="PG.PlayGroup">
+                <Label resid="PG.GroupLabel" />
+                <Icon>
+                  <bt:Image size="16" resid="PG.Icon.16" />
+                  <bt:Image size="32" resid="PG.Icon.32" />
+                  <bt:Image size="80" resid="PG.Icon.80" />
+                </Icon>
+                <Control xsi:type="Button" id="PG.CodeCommand">
+                  <Label resid="PG.CodeCommand.Label" />
+                  <Supertip>
+                    <Title resid="PG.CodeCommand.TipTitle" />
+                    <Description resid="PG.CodeSupertip.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.Code.16" />
+                    <bt:Image size="32" resid="PG.Icon.Code.32" />
+                    <bt:Image size="80" resid="PG.Icon.Code.80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>insertFunction</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+              <Group id="PG.AboutGroup">
+                <Label resid="PG.AboutGroupLabel" />
+                <Icon>
+                  <bt:Image size="16" resid="PG.Icon.16" />
+                  <bt:Image size="32" resid="PG.Icon.32" />
+                  <bt:Image size="80" resid="PG.Icon.80" />
+                </Icon>
+                <Control xsi:type="Button" id="PG.CFCommand">
+                  <Label resid="PG.CFCommand.Label" />
+                  <Supertip>
+                    <Title resid="PG.CFCommand.TipTitle" />
+                    <Description resid="PG.CFSupertip.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.CF.16" />
+                    <bt:Image size="32" resid="PG.Icon.CF.32" />
+                    <bt:Image size="80" resid="PG.Icon.CF.80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>productsFunction</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="PG.TutorialCommand">
+                  <Label resid="PG.TutorialCommand.Label" />
+                  <Supertip>
+                    <Title resid="PG.TutorialCommand.TipTitle" />
+                    <Description resid="PG.TutorialCommand.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.Tutorial.16" />
+                    <bt:Image size="32" resid="PG.Icon.Tutorial.32" />
+                    <bt:Image size="80" resid="PG.Icon.Tutorial.80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>dateFunction</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Menu" id="PG.Flushed">
+						      <Label resid="PG.Flushed.Label" />
+						      <Supertip>
+						    	  <Title resid="PG.Flushed.Label" />
+						    	  <Description resid="PG.Flushed.Desc" />
+						      </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.Help.16" />
+                    <bt:Image size="32" resid="PG.Icon.Help.32" />
+                    <bt:Image size="80" resid="PG.Icon.Help.80" />
+                  </Icon>
+						      <Items>
+						    	  <Item id="flushedFunction1">
+						    		  <Label resid="PG.Flushed.item1.Label"/>
+						    		  <Supertip>
+						    			  <Title resid="PG.Flushed.item1.Label" />
+						    			  <Description resid="PG.Flushed.item1.Desc" />
+						    		  </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="PG.Icon.Help.16" />
+                        <bt:Image size="32" resid="PG.Icon.Help.32" />
+                        <bt:Image size="80" resid="PG.Icon.Help.80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>flushedFunction</FunctionName>
+                      </Action>
+						    	  </Item>
+						    	  <Item id="flushedFunction2">
+						    		  <Label resid="PG.Flushed.item2.Label"/>
+						    		  <Supertip>
+						    			  <Title resid="PG.Flushed.item2.Label" />
+						    			  <Description resid="PG.Flushed.item2.Desc" />
+						    		  </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="PG.Icon.Help.16" />
+                        <bt:Image size="32" resid="PG.Icon.Help.32" />
+                        <bt:Image size="80" resid="PG.Icon.Help.80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>flushedFunction</FunctionName>
+                      </Action>
+						    	  </Item>
+						    	  <Item id="flushedFunction3">
+						    		  <Label resid="PG.Flushed.item3.Label"/>
+						    		  <Supertip>
+						    			  <Title resid="PG.Flushed.item3.Label" />
+						    			  <Description resid="PG.Flushed.item3.Desc" />
+						    		  </Supertip>
+                      <Icon>
+                        <bt:Image size="16" resid="PG.Icon.Help.16" />
+                        <bt:Image size="32" resid="PG.Icon.Help.32" />
+                        <bt:Image size="80" resid="PG.Icon.Help.80" />
+                      </Icon>
+                      <Action xsi:type="ExecuteFunction">
+                        <FunctionName>flushedFunction</FunctionName>
+                      </Action>
+						    	  </Item>
+						      </Items>
+					      </Control>
+              </Group>
+              <Group id="PG.ApiGroup">
+                <Label resid="PG.ApiGroupLabel" />
+                <Icon>
+                  <bt:Image size="16" resid="PG.Icon.16" />
+                  <bt:Image size="32" resid="PG.Icon.32" />
+                  <bt:Image size="80" resid="PG.Icon.80" />
+                </Icon>
+                <Control xsi:type="Button" id="PG.ApiDocsCommand">
+                  <Label resid="PG.ApiDocsCommand.Label" />
+                  <Supertip>
+                    <Title resid="PG.ApiDocsCommand.TipTitle" />
+                    <Description resid="PG.ApiDocsCommand.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.ApiDocs.16" />
+                    <bt:Image size="32" resid="PG.Icon.ApiDocs.32" />
+                    <bt:Image size="80" resid="PG.Icon.ApiDocs.80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>loginFunction</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="PG.AskCommand">
+                  <Label resid="PG.AskCommand.Label" />
+                  <Supertip>
+                    <Title resid="PG.AskCommand.TipTitle" />
+                    <Description resid="PG.AskCommand.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="PG.Icon.Ask.16" />
+                    <bt:Image size="32" resid="PG.Icon.Ask.32" />
+                    <bt:Image size="80" resid="PG.Icon.Ask.80" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>helpFunction</FunctionName>
+                  </Action>
+                </Control>
+              </Group>
+              <Label resid="PG.TabLabel"/>
+            </CustomTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="PG.Icon.16" DefaultValue="https://script-lab.azureedge.net/assets/images/icon-16.png" />
+        <bt:Image id="PG.Icon.32" DefaultValue="https://script-lab.azureedge.net/assets/images/icon-32.png" />
+        <bt:Image id="PG.Icon.80" DefaultValue="https://script-lab.azureedge.net/assets/images/icon-80.png" />
+        <bt:Image id="PG.Icon.Code.16" DefaultValue="https://script-lab.azureedge.net/assets/images/fx-16.png" />
+        <bt:Image id="PG.Icon.Code.32" DefaultValue="https://script-lab.azureedge.net/assets/images/fx-32.png" />
+        <bt:Image id="PG.Icon.Code.80" DefaultValue="https://script-lab.azureedge.net/assets/images/fx-80.png" />
+        <bt:Image id="PG.Icon.CF.16" DefaultValue="https://script-lab.azureedge.net/assets/images/code-16.png" />
+        <bt:Image id="PG.Icon.CF.32" DefaultValue="https://script-lab.azureedge.net/assets/images/code-32.png" />
+        <bt:Image id="PG.Icon.CF.80" DefaultValue="https://script-lab.azureedge.net/assets/images/code-80.png" />
+        <bt:Image id="PG.Icon.Tutorial.16" DefaultValue="https://script-lab.azureedge.net/assets/images/tutorial-16.png" />
+        <bt:Image id="PG.Icon.Tutorial.32" DefaultValue="https://script-lab.azureedge.net/assets/images/tutorial-32.png" />
+        <bt:Image id="PG.Icon.Tutorial.80" DefaultValue="https://script-lab.azureedge.net/assets/images/tutorial-80.png" />
+        <bt:Image id="PG.Icon.Help.16" DefaultValue="https://script-lab.azureedge.net/assets/images/help-16.png" />
+        <bt:Image id="PG.Icon.Help.32" DefaultValue="https://script-lab.azureedge.net/assets/images/help-32.png" />
+        <bt:Image id="PG.Icon.Help.80" DefaultValue="https://script-lab.azureedge.net/assets/images/help-80.png" />
+        <bt:Image id="PG.Icon.ApiDocs.16" DefaultValue="https://script-lab.azureedge.net/assets/images/docs-16.png" />
+        <bt:Image id="PG.Icon.ApiDocs.32" DefaultValue="https://script-lab.azureedge.net/assets/images/docs-32.png" />
+        <bt:Image id="PG.Icon.ApiDocs.80" DefaultValue="https://script-lab.azureedge.net/assets/images/docs-80.png" />
+        <bt:Image id="PG.Icon.Ask.16" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-16.png" />
+        <bt:Image id="PG.Icon.Ask.32" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-32.png" />
+        <bt:Image id="PG.Icon.Ask.80" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-80.png" />
+        <bt:Image id="PG.Icon.Ask.16" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-16.png" />
+        <bt:Image id="PG.Icon.Ask.32" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-32.png" />
+        <bt:Image id="PG.Icon.Ask.80" DefaultValue="https://script-lab.azureedge.net/assets/images/ask-80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="PG.Functions.Url" DefaultValue="https://localhost:3000/index.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/index.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="PG.TabLabel" DefaultValue="火富牛office插件" />
+        <bt:String id="PG.GroupLabel" DefaultValue="函数插入" />
+        <bt:String id="PG.AboutGroupLabel" DefaultValue="数据填充" />
+        <bt:String id="PG.ApiGroupLabel" DefaultValue="关于火富牛" />
+        <bt:String id="PG.CodeCommand.Label" DefaultValue="插入函数" />
+        <bt:String id="PG.CodeCommand.Title" DefaultValue="函数插入" />
+        <bt:String id="PG.CodeCommand.TipTitle" DefaultValue="将火富牛函数插入execl" />
+        <bt:String id="PG.CFCommand.Label" DefaultValue="产品填充" />
+        <bt:String id="PG.CFCommand.Title" DefaultValue="产品填充" />
+        <bt:String id="PG.CFCommand.TipTitle" DefaultValue="选择产品，填充入execl" />
+        <bt:String id="PG.RunCommand.Label" DefaultValue="运行" />
+        <bt:String id="PG.RunCommand.Title" DefaultValue="运行" />
+        <bt:String id="PG.RunCommand.TipTitle" DefaultValue="运行代码段" />
+        <bt:String id="PG.TutorialCommand.Label" DefaultValue="日期填充" />
+        <bt:String id="PG.TutorialCommand.TipTitle" DefaultValue="填充日期" />
+        <bt:String id="PG.Flushed.Label" DefaultValue="刷新数据" />
+        <bt:String id="PG.Flushed.TipTitle" DefaultValue="刷新数据" /> 
+        <bt:String id="PG.Flushed.item1.Label" DefaultValue="全部数据" />
+        <bt:String id="PG.Flushed.item1.TipTitle" DefaultValue="全部数据" /> 
+        <bt:String id="PG.Flushed.item2.Label" DefaultValue="选定sheet" />
+        <bt:String id="PG.Flushed.item2.TipTitle" DefaultValue="选定sheet" /> 
+        <bt:String id="PG.Flushed.item3.Label" DefaultValue="选定单元格" />
+        <bt:String id="PG.Flushed.item3.TipTitle" DefaultValue="选定单元格" /> 
+        <bt:String id="PG.ApiDocsCommand.Label" DefaultValue="登录" />
+        <bt:String id="PG.ApiDocsCommand.TipTitle" DefaultValue="登录火富牛" />
+        <bt:String id="PG.AskCommand.Label" DefaultValue="帮助" />
+        <bt:String id="PG.AskCommand.TipTitle" DefaultValue="获取帮助" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="PG.CodeSupertip.Desc" DefaultValue="插入火富牛函数" />
+        <bt:String id="PG.CFSupertip.Desc" DefaultValue="选择产品，填充入execl" />
+        <bt:String id="PG.RunSupertip.Desc" DefaultValue="打开运行当前代码段的任务窗格" />
+        <bt:String id="PG.TutorialCommand.Desc" DefaultValue="将日期填充入表格" />
+        <bt:String id="PG.Flushed.Desc" DefaultValue="刷新表格数据" />
+        <bt:String id="PG.Flushed.item1.Desc" DefaultValue="显示全部数据" />
+        <bt:String id="PG.Flushed.item2.Desc" DefaultValue="显示选定sheet" />
+        <bt:String id="PG.Flushed.item3.Desc" DefaultValue="显示选定单元格" />
+        <bt:String id="PG.ApiDocsCommand.Desc" DefaultValue="使用火富牛账号登录" />
+        <bt:String id="PG.AskCommand.Desc" DefaultValue="获取火富牛加载项使用帮助" />
+        <bt:String id="PG.Description" DefaultValue="使用火富牛插入与编辑函数" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

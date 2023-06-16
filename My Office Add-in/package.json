@@ -1,0 +1,14 @@
+{
+  "name": "my-office-add-in",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "validate": "office-toolbox validate -m manifest.xml",
+    "start": "office-addin-debugging start manifest.xml"
+  },
+  "dependencies": {
+    "office-addin-debugging": "^5.0.5",
+    "office-toolbox": "^0.1.1"
+  }
+}
